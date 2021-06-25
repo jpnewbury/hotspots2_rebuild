@@ -22,17 +22,14 @@ export default function Layout({ children }) {
         />
         <meta
           name="description"
-          content="Trout Count is an Anglers Log Book and Journal."
+          content="A citizen science program by Roaring Fork Conservancy."
         />
-        <meta property="og:title" content="Trout Count" />
-        <meta
-          property="og:description"
-          content="Trout Count is an Anglers Log Book and Journal."
-        />
-        <meta
+        <meta property="og:title" content="Hot Spots for Trour" />
+        <meta property="og:description" content="A data gathering app." />
+        {/* <meta
           property="og:image"
           content="https://repository-images.githubusercontent.com/201392697/5d392300-eef3-11e9-8e20-53310193fbfd"
-        />
+        /> */}
       </Head>
       <header>
         <nav>
