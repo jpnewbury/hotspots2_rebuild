@@ -69,9 +69,6 @@ export default function Layout({ children }) {
         </nav>
       </header>
       <main>{children}</main>
-      <div className="center">
-        <footer className="footer">© 2021 Roaring Fork Conservancy</footer>
-      </div>
     </>
   );
 }
