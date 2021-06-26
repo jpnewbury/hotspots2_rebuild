@@ -47,7 +47,7 @@ const SignupPage = () => {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Your name"
+                  placeholder="Name you want publicly displayed"
                   required="true"
                 />
               </label>
