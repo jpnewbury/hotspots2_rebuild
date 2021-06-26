@@ -243,7 +243,7 @@ export default function PostEditor() {
                 <br />
                 <p>
                   Placeholder values are showing your current location. If blank
-                  or you are not at your sample locaion, please enter the
+                  or you are not at your sample location, please enter the
                   waypoints that you recorded from the field.
                 </p>
               </div>
