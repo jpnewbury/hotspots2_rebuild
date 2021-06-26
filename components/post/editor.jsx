@@ -419,7 +419,7 @@ export default function PostEditor() {
                 rows="4"
                 cols="50"
                 required="false"
-                placeholder="Please tell us about your observations at this location. Include conditions such as lagae accumulation, distressed or dead fish or foul odors."
+                placeholder="Please tell us about your observations at this location. Include conditions such as algae accumulation, distressed or dead fish or foul odors."
               />
             </div>
           </section>

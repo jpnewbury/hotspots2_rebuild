@@ -48,6 +48,7 @@ const SignupPage = () => {
                   name="name"
                   type="text"
                   placeholder="Your name"
+                  required="true"
                 />
               </label>
             </div>
@@ -59,6 +60,7 @@ const SignupPage = () => {
                   name="email"
                   type="email"
                   placeholder="Email address"
+                  required="true"
                 />
               </label>
             </div>
@@ -69,6 +71,7 @@ const SignupPage = () => {
                   name="password"
                   type="password"
                   placeholder="Create a password"
+                  required="true"
                 />
               </label>
             </div>
