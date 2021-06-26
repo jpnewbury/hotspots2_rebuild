@@ -29,7 +29,7 @@ function Post({ post }) {
             )}
             <div>
               <ul>
-                <li>Date: {post.startdate}</li>
+                <li>Sample Date: {post.startdate}</li>
                 <li>Location: {post.location}</li>
                 <li>
                   Air Temperature: <b>{post.AirTemp}</b>
@@ -58,7 +58,7 @@ function Post({ post }) {
             </div>
             <div>
               <p>
-                <b>Notes:</b> <p>{post.content}</p>
+                Notes: <p>{post.content}</p>
               </p>
             </div>
           </div>

@@ -10,9 +10,10 @@ import PartlyCloudy from "../svg/partlyCloudy";
 import Sunny from "../svg/sunny";
 import Thunderstorms from "../svg/tstorms";
 import Windy from "../svg/windy";
-import Snow from "../svg/snow";
 import Rain from "../svg/rain";
-import Button from "../button";
+import Gps from "../svg/gps";
+import NoGps from "../svg/Gpsno";
+import { longStackSupport } from "q";
 
 export default function PostEditor() {
   const lat = localStorage.getItem("Latitude");
@@ -112,7 +113,7 @@ export default function PostEditor() {
                 />
               </div>
               <div>
-                <input
+                {/* <input
                   className="hidden"
                   name="lat"
                   type="text"
@@ -123,19 +124,22 @@ export default function PostEditor() {
                   name="lon"
                   type="text"
                   value={Longitude}
-                />
+                /> */}
               </div>
             </div>
           </section>
           <h3>Location:</h3>
           <section className="location">
             <div>
+              <div>
+                <h3>Select a River:</h3>
+              </div>
               <select name="location">
                 <option value="Roaring Fork River - Upstream of Aspen">
-                  Roaring Fork River - Upstream of Aspen
+                  Roaring Fork River - upstream of Aspen
                 </option>
                 <option value="Roaring Fork River - Aspen - Carbondale">
-                  Roaring Fork River - Aspen - Basalt
+                  Roaring Fork River - Aspen to Basalt
                 </option>
                 <option value="Roaring Fork River - Carbondale to Mouth">
                   Roaring Fork River - Carbondale to Mouth
@@ -147,32 +151,104 @@ export default function PostEditor() {
                   Fryingpan River below Reudi
                 </option>
                 <option value="Crystal River usptream of Marble">
-                  Crystal River usptream of Marble
+                  Crystal River - usptream of Marble
                 </option>
                 <option value="Crystal River Marble to Redstone">
-                  Crystal River Marble to Redstone
+                  Crystal River - Marble to Redstone
                 </option>
                 <option value="Crystal River Redstone to Mouth">
-                  Crystal River Redstone to Mouth
+                  Crystal River - Redstone to Mouth
                 </option>
                 <option value="Maroon Creek">Maroon Creek</option>
                 <option value="Castle Creek">Castle Creek</option>
                 <option value="Snowmass Creek">Snowmass Creek</option>
                 <option value="Cattle Creek above Coulter Creek">
-                  Cattle Creek above Coultier Creek
+                  Cattle Creek - above Coultier Creek
                 </option>
                 <option value="Cattle Creek below Coulter Creek">
-                  Cattle Creek below Coultier Creek
+                  Cattle Creek - below Coultier Creek
                 </option>
                 <option value="Colorado River Near Glenwood Springs">
-                  Colorado River Near Glenwood Springs
+                  Colorado River near Glenwood Springs
                 </option>
                 <option value="No Name Creek">No Name Creek</option>
               </select>
             </div>
 
             <small>
-              <b>GPS</b>: {lat} {lon}
+              {!lat && (
+                <>
+                  <NoGps style="weather_icon" />
+                  <p>
+                    We cannot access your current position, please allow your
+                    browser to access this location or log out and back in again
+                    to activate.
+                  </p>
+                </>
+              )}
+              {lat && (
+                <>
+                  <div>
+                    <h3>Waypoints:</h3>
+                  </div>
+                  <div className="col-2b">
+                    <div className="">
+                      <Gps style="weather_icon" />
+                    </div>
+
+                    <div></div>
+                  </div>
+                </>
+              )}
+
+              {/* <div className="col-2c">
+                <div className="center"></div>
+                <div className="col-2b">
+                  <div className="center"> Lattitude</div>
+
+                  <input
+                    type="text"
+                    name="lat"
+                    id="lat"
+                    placeholder="lattitude"
+                  />
+                </div>
+              </div> */}
+
+              <div className="col-2b">
+                <div className="center"></div>
+                <div className="center">
+                  <input
+                    type="text"
+                    name="lat"
+                    id="lat"
+                    placeholder="Lattitude"
+                  />
+                </div>
+                <div className="center">Longitude:</div>
+                <div>{lat}</div>
+              </div>
+              <div className="col-2b">
+                <div className="center"></div>
+                <div className="center">
+                  <input
+                    type="text"
+                    name="lon"
+                    id="lon"
+                    placeholder="Longitude"
+                  />
+                </div>
+                <div className="center">Longitude:</div>
+                <div>{lon}</div>
+              </div>
+              <div>
+                <br />
+                <p>
+                  Placeholder values are showing your current location. If blank
+                  or you are not at your sample locaion, please enter the
+                  waypoints you recorded from the sample location.
+                </p>
+              </div>
             </small>
           </section>
           {/* <section>
@@ -273,7 +349,7 @@ export default function PostEditor() {
               </div>
 
               <div className="block">
-                <h3>Air Temerature:</h3>
+                <h3>Air Temperature:</h3>
                 <p>
                   {state.x}
                   <sup>º</sup>F ~ {c.toFixed(0)}
@@ -343,7 +419,7 @@ export default function PostEditor() {
                 rows="4"
                 cols="50"
                 required="false"
-                placeholder="Please note your observations about the water conditions including algae."
+                placeholder="Please tell us about your observations at this location. Include conditions such as lagae accumulation, distressed or dead fish or foul odors."
               />
             </div>
           </section>
