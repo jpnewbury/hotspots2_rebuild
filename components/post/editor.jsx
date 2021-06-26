@@ -215,8 +215,7 @@ export default function PostEditor() {
                 </div>
               </div> */}
 
-              <div className="col-2b">
-                <div className="center"></div>
+              <div>
                 <div className="center">
                   <input
                     type="text"
@@ -225,11 +224,10 @@ export default function PostEditor() {
                     placeholder="Lattitude"
                   />
                 </div>
-                <div className="center">Longitude:</div>
+                <div className="center"></div>
                 <div>{lat}</div>
               </div>
-              <div className="col-2b">
-                <div className="center"></div>
+              <div className="">
                 <div className="center">
                   <input
                     type="text"
@@ -238,7 +236,7 @@ export default function PostEditor() {
                     placeholder="Longitude"
                   />
                 </div>
-                <div className="center">Longitude:</div>
+                <div className="center"></div>
                 <div>{lon}</div>
               </div>
               <div>
