@@ -188,6 +188,7 @@ select:focus {
 
 .container {
   max-width: 800px;
+  background-color: #fafafa;
 }
 
 .header {

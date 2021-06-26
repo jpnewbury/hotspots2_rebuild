@@ -246,7 +246,7 @@ export default function PostEditor() {
                 <p>
                   Placeholder values are showing your current location. If blank
                   or you are not at your sample locaion, please enter the
-                  waypoints you recorded from the sample location.
+                  waypoints that you recorded from the field.
                 </p>
               </div>
             </small>

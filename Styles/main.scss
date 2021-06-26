@@ -170,6 +170,7 @@ select:focus {
 
 .container {
     max-width: 800px;
+    background-color: $gray-9;
 }
 .header {
     @include block;
