@@ -31,6 +31,7 @@ export default function PostEditor() {
   const l = size.x / 0.3937;
   const [weather, setWeather] = useState(0);
   const [algae, setAlgae] = useState(0);
+  const [river, setRiver] = useState(null);
   // const [hatch, setHatch] = useState(null);
 
   if (!user) {
@@ -48,10 +49,14 @@ export default function PostEditor() {
     // sets the state property for the location
     setLocation(event.target.value);
   };
-  // const onRiver = (event) => {
-  //   // sets the state property for the location
-  //   setRiver(event.target.value);
-  // };
+  const onOther = (event) => {
+    // sets the state property for the location
+    setOther(event.target.value);
+  };
+  const onRiver = (event) => {
+    // sets the state property for the location
+    setRiver(event.target.value);
+  };
   // const onHatch = (event) => {
   //   // sets the state property for the location
   //   setHatch(event.target.value);
@@ -68,6 +73,7 @@ export default function PostEditor() {
       content: e.currentTarget.content.value,
       lat: e.currentTarget.lat.value,
       lon: e.currentTarget.lon.value,
+      river: e.currentTarget.river.value,
     };
 
     if (!e.currentTarget.content.value) return;
@@ -112,20 +118,7 @@ export default function PostEditor() {
                   value={new Date(startdate).toLocaleString()}
                 />
               </div>
-              <div>
-                {/* <input
-                  className="hidden"
-                  name="lat"
-                  type="text"
-                  value={Lattitude}
-                />
-                <input
-                  className="hidden"
-                  name="lon"
-                  type="text"
-                  value={Longitude}
-                /> */}
-              </div>
+              <div></div>
             </div>
           </section>
           <h3>Location:</h3>
@@ -135,11 +128,15 @@ export default function PostEditor() {
                 <h3>Select a River:</h3>
               </div>
               <select name="location">
+                <option value="">Select:</option>
                 <option value="Roaring Fork River - Upstream of Aspen">
                   Roaring Fork River - upstream of Aspen
                 </option>
                 <option value="Roaring Fork River - Aspen - Carbondale">
                   Roaring Fork River - Aspen to Basalt
+                </option>
+                <option value="Roaring Fork River - Aspen - Carbondale">
+                  Roaring Fork River - Baslat to Carbondale
                 </option>
                 <option value="Roaring Fork River - Carbondale to Mouth">
                   Roaring Fork River - Carbondale to Mouth
@@ -163,16 +160,31 @@ export default function PostEditor() {
                 <option value="Castle Creek">Castle Creek</option>
                 <option value="Snowmass Creek">Snowmass Creek</option>
                 <option value="Cattle Creek above Coulter Creek">
-                  Cattle Creek - above Coultier Creek
+                  Cattle Creek - above Coulter Creek
                 </option>
                 <option value="Cattle Creek below Coulter Creek">
                   Cattle Creek - below Coultier Creek
                 </option>
                 <option value="Colorado River Near Glenwood Springs">
-                  Colorado River near Glenwood Springs
+                  Colorado River upstream from confluence of Roaring Fork
                 </option>
+                <option value="Colorado River downstream from confluence of Roaring Fork River">
+                  Colorado River downstream from confluence of Roaring Fork
+                  River
+                </option>
+                <option value=" Colorado River downstream from confluence of Roaring Fork River">
+                  Colorado River downstrwam of confluence of Roaring Fork River
+                </option>
+                <option value="Grizzly Cree">Grizzly Creek</option>
                 <option value="No Name Creek">No Name Creek</option>
               </select>
+              <input
+                name="river"
+                type="text"
+                placeholder="Other Location"
+                value={river}
+                onChange={onRiver}
+              />
             </div>
 
             <small>
@@ -221,7 +233,7 @@ export default function PostEditor() {
                     type="text"
                     name="lat"
                     id="lat"
-                    placeholder="Lattitude"
+                    placeholder="Latitude"
                   />
                 </div>
                 <div className="center"></div>
