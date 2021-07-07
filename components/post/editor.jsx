@@ -168,9 +168,8 @@ export default function PostEditor() {
                 <option value="Colorado River Near Glenwood Springs">
                   Colorado River upstream from confluence of Roaring Fork
                 </option>
-                <option value="Colorado River downstream from confluence of Roaring Fork River">
-                  Colorado River downstream from confluence of Roaring Fork
-                  River
+                <option value="Colorado River upstream from confluence of Roaring Fork River">
+                  Colorado River upstream from confluence of Roaring Fork River
                 </option>
                 <option value=" Colorado River downstream from confluence of Roaring Fork River">
                   Colorado River downstrwam of confluence of Roaring Fork River
