@@ -24,23 +24,19 @@ export default function PostEditor() {
   const [size, setSize] = useState({ x: 16 });
   const [water, setWater] = useState({ x: 55 });
   const [startdate, setStartDate] = useState(new Date());
-  const Lattitude = localStorage.getItem("Latitude");
-  const Longitude = localStorage.getItem("Longitude");
+  // const Lattitude = localStorage.getItem("Latitude");
+  // const Longitude = localStorage.getItem("Longitude");
   const c = ((state.x - 32) * 5) / 9;
   const wc = ((water.x - 32) * 5) / 9;
   const l = size.x / 0.3937;
   const [weather, setWeather] = useState(0);
-  const [algae, setAlgae] = useState(0);
+  // const [algae, setAlgae] = useState(0);
   const [river, setRiver] = useState(null);
-  // const [hatch, setHatch] = useState(null);
 
   if (!user) {
     return <div>Please sign in to post</div>;
   }
 
-  // const onCfs = (event) => {
-  //   setCfs(event.target.value);
-  // };
   const onChange = (event) => {
     setAlgae(event.target.value);
   };
@@ -50,17 +46,13 @@ export default function PostEditor() {
     setLocation(event.target.value);
   };
   const onOther = (event) => {
-    // sets the state property for the location
+    // sets the state property for the other location
     setOther(event.target.value);
   };
   const onRiver = (event) => {
     // sets the state property for the location
     setRiver(event.target.value);
   };
-  // const onHatch = (event) => {
-  //   // sets the state property for the location
-  //   setHatch(event.target.value);
-  // };
 
   async function hanldeSubmit(e) {
     e.preventDefault();
@@ -132,10 +124,10 @@ export default function PostEditor() {
                 <option value="Roaring Fork River - Upstream of Aspen">
                   Roaring Fork River - upstream of Aspen
                 </option>
-                <option value="Roaring Fork River - Aspen - Carbondale">
+                <option value="Roaring Fork River - Aspen - Basalt">
                   Roaring Fork River - Aspen to Basalt
                 </option>
-                <option value="Roaring Fork River - Aspen - Carbondale">
+                <option value="Roaring Fork River - Basalt to Carbondale">
                   Roaring Fork River - Basalt to Carbondale
                 </option>
                 <option value="Roaring Fork River - Carbondale to Mouth">
