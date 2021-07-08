@@ -154,7 +154,7 @@ export default function PostEditor() {
                   Crystal River - Marble to Redstone
                 </option>
                 <option value="Crystal River Redstone to Mouth">
-                  Crystal River - Redstone to Mouth
+                  Crystal River - Redstone to confluence of Roaring Fork River
                 </option>
                 <option value="Maroon Creek">Maroon Creek</option>
                 <option value="Castle Creek">Castle Creek</option>
