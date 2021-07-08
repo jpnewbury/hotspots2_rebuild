@@ -163,6 +163,9 @@ export default function PostEditor() {
                   Cattle Creek - above Coulter Creek
                 </option>
                 <option value="Cattle Creek below Coulter Creek">
+                  Cattle Creek - below Coulter Creek
+                </option>
+                <option value="Cattle Creek below Coulter Creek">
                   Cattle Creek - below Coultier Creek
                 </option>
                 <option value="Colorado River upstream from confluence of Roaring Fork River">
