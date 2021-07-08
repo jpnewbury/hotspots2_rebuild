@@ -9,6 +9,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 80px;
 }
 
 * {
@@ -28,16 +29,27 @@ body {
 button {
   border: 1px solid black;
   border-radius: 5px;
+  color: #fafafa;
+  font-size: 1.1rem;
   cursor: pointer;
   margin: 5px;
+  margin-bottom: 40px;
   padding: 7px;
-  background: #fafafa;
+  background: #006eff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 button:hover {
   background: #4b4b4b;
+  color: #fafafa;
+}
+
+footer {
+  background-color: rgba(0, 110, 255, 0.7);
+}
+
+footer h3 {
   color: #fafafa;
 }
 
@@ -263,6 +275,12 @@ select:focus {
           flex: 1 1 50px;
 }
 
+.right {
+  position: absolute;
+  margin-right: 10%;
+  margin-left: 90%;
+}
+
 .small_icon {
   height: 40px;
   width: 40px;
@@ -284,11 +302,19 @@ select:focus {
   border: 1px solid black;
   border-radius: 5px;
   background: #fafafa;
+  margin-top: 10px;
 }
 
 .weather_icon {
   height: 100px;
   fill: #646464;
+  padding: 7px;
+  margin: 5px;
+}
+
+.weather_icon_white {
+  height: 50px;
+  fill: #fafafa;
   padding: 7px;
   margin: 5px;
 }

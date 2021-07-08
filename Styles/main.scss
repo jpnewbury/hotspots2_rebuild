@@ -40,6 +40,7 @@ $box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 80px;
 }
 
 * {
@@ -56,15 +57,24 @@ body {
 }
 button {
     @include border;
+    color: $gray-9;
+    font-size: 1.1rem;
     cursor: pointer;
     margin: $margin;
+    margin-bottom: 40px;
     padding: $padding;
-    background: $gray-9;
+    background: $blue;
     box-shadow: $box-shadow;
 }
 button:hover {
     background: $gray-2;
     color: $gray-9;
+}
+footer {
+    background-color: rgba($blue, 0.7);
+    h3 {
+        color: $gray-9;
+    }
 }
 p {
     margin-bottom: $margin;
@@ -213,7 +223,11 @@ select:focus {
 .grid-small > * {
     flex: 1 1 50px;
 }
-
+.right {
+    position: absolute;
+    margin-right: 10%;
+    margin-left: 90%;
+}
 .small_icon {
     height: 40px;
     width: 40px;
@@ -231,11 +245,17 @@ select:focus {
     @include block;
     @include border;
     background: $gray-9;
+    margin-top: 10px;
 }
 
 .weather_icon {
     height: 100px;
     fill: $gray-3;
+    @include block;
+}
+.weather_icon_white {
+    height: 50px;
+    fill: $gray-9;
     @include block;
 }
 

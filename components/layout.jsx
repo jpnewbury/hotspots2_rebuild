@@ -1,7 +1,7 @@
-import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useCurrentUser } from "@/hooks/index";
+import Bird from "../components/svg/Bird";
 
 export default function Layout({ children }) {
   const [user, { mutate }] = useCurrentUser();
@@ -71,6 +71,16 @@ export default function Layout({ children }) {
             </nav>
           </header>
           <main>{children}</main>
+          <footer>
+            <div className="col-2b">
+              <div>
+                <Bird style="weather_icon_white" />
+              </div>
+              <div className="center">
+                <h3>© 2021 Roaring Fork Conservancy</h3>
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
     </>
