@@ -19,6 +19,7 @@ function Post({ post }) {
   const w = ((post.temperature - 32) * 5) / 9;
   return (
     <div className="container">
+      <h3>Recent Observations</h3>
       <div className="post__card">
         <div className="col-2">
           <div>
