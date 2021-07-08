@@ -136,7 +136,7 @@ export default function PostEditor() {
                   Roaring Fork River - Aspen to Basalt
                 </option>
                 <option value="Roaring Fork River - Aspen - Carbondale">
-                  Roaring Fork River - Baslat to Carbondale
+                  Roaring Fork River - Basalt to Carbondale
                 </option>
                 <option value="Roaring Fork River - Carbondale to Mouth">
                   Roaring Fork River - Carbondale to Mouth
