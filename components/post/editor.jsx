@@ -165,9 +165,6 @@ export default function PostEditor() {
                 <option value="Cattle Creek below Coulter Creek">
                   Cattle Creek - below Coultier Creek
                 </option>
-                <option value="Colorado River Near Glenwood Springs">
-                  Colorado River upstream from confluence of Roaring Fork
-                </option>
                 <option value="Colorado River upstream from confluence of Roaring Fork River">
                   Colorado River upstream from confluence of Roaring Fork River
                 </option>
