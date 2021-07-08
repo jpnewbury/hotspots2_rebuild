@@ -231,7 +231,7 @@ export default function PostEditor() {
                   or you are not at your sample location, please enter the
                   waypoints that you recorded from the field. If you have
                   allowed location access and your coordinates are not
-                  displayed, logout and back in again will show your current
+                  displayed, loging out and back in again will show your current
                   position.
                 </p>
               </div>
