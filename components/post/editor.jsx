@@ -229,7 +229,10 @@ export default function PostEditor() {
                 <p>
                   Placeholder values are showing your current location. If blank
                   or you are not at your sample location, please enter the
-                  waypoints that you recorded from the field.
+                  waypoints that you recorded from the field. If you have
+                  allowed location access and your coordinates are not
+                  displayed, logout and back in again will show your current
+                  position.
                 </p>
               </div>
             </small>
