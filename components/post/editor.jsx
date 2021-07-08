@@ -157,9 +157,6 @@ export default function PostEditor() {
                 <option value="Cattle Creek below Coulter Creek">
                   Cattle Creek - below Coulter Creek
                 </option>
-                <option value="Cattle Creek above Coulter Creek">
-                  Cattle Creek - above Coultier Creek
-                </option>
                 <option value="Colorado River upstream from confluence of Roaring Fork River">
                   Colorado River upstream from confluence of Roaring Fork River
                 </option>
@@ -203,21 +200,6 @@ export default function PostEditor() {
                   </div>
                 </>
               )}
-
-              {/* <div className="col-2c">
-                <div className="center"></div>
-                <div className="col-2b">
-                  <div className="center"> Lattitude</div>
-
-                  <input
-                    type="text"
-                    name="lat"
-                    id="lat"
-                    placeholder="lattitude"
-                  />
-                </div>
-              </div> */}
-
               <div>
                 <div className="center">
                   <input
@@ -252,14 +234,6 @@ export default function PostEditor() {
               </div>
             </small>
           </section>
-          {/* <section>
-            <h3>Algae Observation</h3>
-            <select name="algae">
-              <option value="None">No algae observed</option>
-              <option value="shallows">Algae in shadows</option>
-            </select>
-          </section> */}
-
           <div className="block">
             <h3>Conditions:</h3>
           </div>
