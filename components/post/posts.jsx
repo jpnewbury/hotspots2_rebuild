@@ -140,6 +140,23 @@ function Post({ post }) {
           </div>
         </div>
       </div>
+      {/* <table>
+        <tr>
+          <th>Date:</th>
+          <th>Location:</th>
+          <th>Air Temp:</th>
+          <th>Water Temp:</th>
+          <th>Notes:</th>
+        </tr>
+        <td>{post.startdate}</td>
+        <td>
+          {post.location && <> {post.location}</>}
+          {post.river && <> {post.river}</>}
+        </td>
+        <td>{post.AirTemp}</td>
+        <td>{post.temperature}</td>
+        <td>{post.content}</td>
+      </table> */}
     </div>
   );
 }

@@ -50,9 +50,11 @@ $box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     text-decoration: none;
 }
 
-body {
-    @include block;
+html {
+    font: 100%/1.4 system-ui;
     font-family: $font-family;
+}
+body {
     color: $gray-1;
 }
 button {
@@ -86,9 +88,14 @@ h1 {
 }
 h2 {
     font-size: 1.6rem;
+    padding-left: $padding;
 }
 h3 {
     font-size: 1.2rem;
+    padding-left: $padding;
+}
+header {
+    @include block;
 }
 input[type="password"] {
     width: 100%;
@@ -300,4 +307,34 @@ select:focus {
     font-size: 2rem;
     font-weight: 900;
     color: red;
+}
+
+table {
+    margin: auto;
+    min-width: 100%;
+    border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+}
+th {
+    background-color: $gray-8;
+    font-weight: 900;
+    text-align: left;
+    padding-left: $padding;
+    padding-bottom: $padding;
+    height: 40px;
+}
+td {
+    height: 30px;
+    vertical-align: bottom;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-left: $padding;
+    padding-bottom: $padding;
+}
+
+tr:nth-child(even) {
+    background-color: $gray-7;
+}
+tr:nth-child(odd) {
+    background-color: $gray-6;
 }

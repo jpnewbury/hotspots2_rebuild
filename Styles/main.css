@@ -19,10 +19,12 @@
   text-decoration: none;
 }
 
-body {
-  padding: 7px;
-  margin: 5px;
+html {
+  font: 100%/1.4 system-ui;
   font-family: "Nunito Sans", sans-serif;
+}
+
+body {
   color: #323232;
 }
 
@@ -65,10 +67,17 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
+  padding-left: 7px;
 }
 
 h3 {
   font-size: 1.2rem;
+  padding-left: 7px;
+}
+
+header {
+  padding: 7px;
+  margin: 5px;
 }
 
 input[type="password"] {
@@ -369,5 +378,39 @@ select:focus {
   font-size: 2rem;
   font-weight: 900;
   color: red;
+}
+
+table {
+  margin: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+}
+
+th {
+  background-color: #e1e1e1;
+  font-weight: 900;
+  text-align: left;
+  padding-left: 7px;
+  padding-bottom: 7px;
+  height: 40px;
+}
+
+td {
+  height: 30px;
+  vertical-align: bottom;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
+
+tr:nth-child(even) {
+  background-color: #c8c8c8;
+}
+
+tr:nth-child(odd) {
+  background-color: #afafaf;
 }
 /*# sourceMappingURL=main.css.map */
