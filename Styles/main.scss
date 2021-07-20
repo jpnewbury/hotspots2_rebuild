@@ -164,15 +164,46 @@ select:focus {
     color: $gray-9;
 }
 
+table {
+    margin: auto;
+    min-width: 100%;
+    border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+}
+th {
+    background-color: $gray-8;
+    font-weight: 900;
+    text-align: left;
+    padding-left: $padding;
+    padding-bottom: $padding;
+    height: 40px;
+}
+td {
+    height: 30px;
+    vertical-align: bottom;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-left: $padding;
+    padding-bottom: $padding;
+}
+
+tr:nth-child(even) {
+    background-color: $gray-7;
+}
+tr:nth-child(odd) {
+    background-color: $gray-6;
+}
+
 .alert {
     color: red;
     font-weight: 700;
     @include center;
 }
-.card {
-    max-width: 80px;
-    margin: $margin;
-}
+// .card {
+//     max-width: 80px;
+//     margin: $margin;
+//     box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+// }
 .center {
     @include center;
 }
@@ -250,7 +281,8 @@ select:focus {
 
 .post__card {
     @include block;
-    @include border;
+    // @include border;
+    border-bottom: 2px solid $gray-5;
     background: $gray-9;
     margin-top: 10px;
 }
@@ -307,34 +339,4 @@ select:focus {
     font-size: 2rem;
     font-weight: 900;
     color: red;
-}
-
-table {
-    margin: auto;
-    min-width: 100%;
-    border-collapse: collapse;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
-}
-th {
-    background-color: $gray-8;
-    font-weight: 900;
-    text-align: left;
-    padding-left: $padding;
-    padding-bottom: $padding;
-    height: 40px;
-}
-td {
-    height: 30px;
-    vertical-align: bottom;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding-left: $padding;
-    padding-bottom: $padding;
-}
-
-tr:nth-child(even) {
-    background-color: $gray-7;
-}
-tr:nth-child(odd) {
-    background-color: $gray-6;
 }

@@ -162,6 +162,40 @@ select:focus {
   color: #fafafa;
 }
 
+table {
+  margin: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
+}
+
+th {
+  background-color: #e1e1e1;
+  font-weight: 900;
+  text-align: left;
+  padding-left: 7px;
+  padding-bottom: 7px;
+  height: 40px;
+}
+
+td {
+  height: 30px;
+  vertical-align: bottom;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
+
+tr:nth-child(even) {
+  background-color: #c8c8c8;
+}
+
+tr:nth-child(odd) {
+  background-color: #afafaf;
+}
+
 .alert {
   color: red;
   font-weight: 700;
@@ -174,11 +208,6 @@ select:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.card {
-  max-width: 80px;
-  margin: 5px;
 }
 
 .center {
@@ -308,8 +337,7 @@ select:focus {
 .post__card {
   padding: 7px;
   margin: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
+  border-bottom: 2px solid #969696;
   background: #fafafa;
   margin-top: 10px;
 }
@@ -378,39 +406,5 @@ select:focus {
   font-size: 2rem;
   font-weight: 900;
   color: red;
-}
-
-table {
-  margin: auto;
-  min-width: 100%;
-  border-collapse: collapse;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
-}
-
-th {
-  background-color: #e1e1e1;
-  font-weight: 900;
-  text-align: left;
-  padding-left: 7px;
-  padding-bottom: 7px;
-  height: 40px;
-}
-
-td {
-  height: 30px;
-  vertical-align: bottom;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding-left: 7px;
-  padding-bottom: 7px;
-}
-
-tr:nth-child(even) {
-  background-color: #c8c8c8;
-}
-
-tr:nth-child(odd) {
-  background-color: #afafaf;
 }
 /*# sourceMappingURL=main.css.map */
