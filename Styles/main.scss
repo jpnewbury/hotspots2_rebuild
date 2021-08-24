@@ -176,10 +176,9 @@ th {
     text-align: left;
     padding-left: $padding;
     padding-bottom: $padding;
-    height: 40px;
 }
 td {
-    height: 30px;
+    height: 65px;
     vertical-align: bottom;
     font-size: 0.9rem;
     font-weight: 600;
@@ -217,7 +216,7 @@ tr:nth-child(odd) {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     background-color: $gray-9;
 }
 .header {

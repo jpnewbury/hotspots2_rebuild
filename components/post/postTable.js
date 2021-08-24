@@ -18,15 +18,63 @@ function Post({ post }) {
   const t = ((post.AirTemp - 32) * 5) / 9;
   const w = ((post.temperature - 32) * 5) / 9;
   return (
-    <div className="container">
-      <div className="post__card">
+    <>
+      <table>
+        <tr>
+          <th>Posted By:</th>
+          <th>Sample Date:</th>
+          <th>Location:</th>
+          <th>Air Temp:</th>
+          <th>Water Temp:</th>
+          <th>Observed Weather</th>
+          <th>Notes:</th>
+        </tr>
+        <td>
+          {user && (
+            <Link href={`/user/${user._id}`}>
+              <>Posted By: {user.name}</>
+            </Link>
+          )}
+        </td>
+        <td>{post.startdate}</td>
+        <td>
+          {post.location && <> {post.location}</>}
+          {post.river && <> {post.river}</>}
+        </td>
+        <td>{post.AirTemp}</td>
+        <td>{post.temperature}</td>
+        <td>
+          <li>
+            {post.weather === "Sunny" ? (
+              <Sunny style="weather_icon_sm" />
+            ) : null}
+            {post.weather === "PtCLD" ? (
+              <PtCloud style="weather_icon_sm" />
+            ) : null}
+            {post.weather === "Cld" ? <Cloudy style="weather_icon_sm" /> : null}
+            {post.weather === "CldWind" ? (
+              <CloudyWindy style="weather_icon_sm" />
+            ) : null}
+            {post.weather === "Wind" ? <Windy style="weather_icon_sm" /> : null}
+            {post.weather === "Gusts" ? (
+              <CloudyGusts style="weather_icon_sm" />
+            ) : null}
+            {post.weather === "Rain" ? <Rain style="weather_icon_sm" /> : null}
+            {post.weather === "Scattered" ? (
+              <Showers style="weather_icon_sm" />
+            ) : null}
+            {post.weather === "ScatteredTStorm" ? (
+              <Tstorms style="weather_icon_sm" />
+            ) : null}
+            {post.weather === "Snow" ? <Snow style="weather_icon_sm" /> : null}
+          </li>
+        </td>
+        <td>{post.content}</td>
+      </table>
+
+      {/* <div className="post__card">
         <div className="col-2">
           <div>
-            {user && (
-              <Link href={`/user/${user._id}`}>
-                <>Posted By: {user.name}</>
-              </Link>
-            )}
             <div>
               <ul>
                 <li>Sample Date: {post.startdate}</li>
@@ -68,41 +116,7 @@ function Post({ post }) {
           </div>
 
           <div className="stack">
-            <div className="center">
-              {" "}
-              <li>
-                {post.weather === "Sunny" ? (
-                  <Sunny style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "PtCLD" ? (
-                  <PtCloud style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "Cld" ? (
-                  <Cloudy style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "CldWind" ? (
-                  <CloudyWindy style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "Wind" ? (
-                  <Windy style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "Gusts" ? (
-                  <CloudyGusts style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "Rain" ? (
-                  <Rain style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "Scattered" ? (
-                  <Showers style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "ScatteredTStorm" ? (
-                  <Tstorms style="weather_icon_sm" />
-                ) : null}
-                {post.weather === "Snow" ? (
-                  <Snow style="weather_icon_sm" />
-                ) : null}
-              </li>
-            </div>
+            <div className="center"> </div>
             {post.temperature <= "62" ? (
               <>
                 <div className="stack">
@@ -140,29 +154,12 @@ function Post({ post }) {
             </div>
           </div>
         </div>
-      </div>
-      {/* <table>
-        <tr>
-          <th>Date:</th>
-          <th>Location:</th>
-          <th>Air Temp:</th>
-          <th>Water Temp:</th>
-          <th>Notes:</th>
-        </tr>
-        <td>{post.startdate}</td>
-        <td>
-          {post.location && <> {post.location}</>}
-          {post.river && <> {post.river}</>}
-        </td>
-        <td>{post.AirTemp}</td>
-        <td>{post.temperature}</td>
-        <td>{post.content}</td>
-      </table> */}
-    </div>
+      </div> */}
+    </>
   );
 }
 
-const PAGE_SIZE = 50;
+const PAGE_SIZE = 500;
 
 export function usePostPages({ creatorId } = {}) {
   return useSWRInfinite(
