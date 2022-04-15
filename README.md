@@ -148,3 +148,4 @@ Please see my [contributing.md](CONTRIBUTING.md).
 # dev-troutcount
 # hotspots2_rebuild
 # dev-hotspots-2021
+# hotspots_2022
